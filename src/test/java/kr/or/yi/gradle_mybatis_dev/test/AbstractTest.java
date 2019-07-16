@@ -1,4 +1,4 @@
-package kr.or.yi.gradle_mybatis_dev.jdbc;
+package kr.or.yi.gradle_mybatis_dev.test;
 
 
 import org.apache.ibatis.logging.Log;
