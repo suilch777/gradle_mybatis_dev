@@ -1,18 +1,25 @@
-package kr.or.yi.gradle_mybatis_dev.mapper;
+package kr.or.yi.gradle_mybatis_dev.dao;
 
 import java.util.List;
 import java.util.Map;
 
 import kr.or.yi.gradle_mybatis_dev.dto.Student;
 
+
+
 public interface StudentMapper {
 	Student selectStudentByNo(Student student);//typehandler�̿�
 	Student selectStudentByNoWithResultMap(Student student);//resultmap�̿�
-	
 	List<Student> selectStudentByAll();
-	List<Map<String, Object>> selectStudentMapByall();
+	
+	Student selectStudentByNoResultMapExtends(Student student);
+	
+	List<Map<String, Object>> selectStudentMapByAll();
 	
 	
 	int insertStudent(Student student);
+	int insertStudentAutoInc(Student student);
 
+	int updateStudent(Student student);
+	int deleteStudent(int id);
 }

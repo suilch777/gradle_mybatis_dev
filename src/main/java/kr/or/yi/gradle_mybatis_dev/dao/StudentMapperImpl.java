@@ -1,4 +1,4 @@
-package kr.or.yi.gradle_mybatis_dev.mapper;
+package kr.or.yi.gradle_mybatis_dev.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSession;
 
 import kr.or.yi.gradle_mybatis_dev.dto.Student;
 import kr.or.yi.gradle_mybatis_dev.jdbc.MyBatisSqlSessionFactory;
-
 
 public class StudentMapperImpl implements StudentMapper {
 	private String namespace = "kr.or.yi.gradle_mybatis_dev_teacher.dao.StudentMapper";
@@ -42,6 +41,7 @@ public class StudentMapperImpl implements StudentMapper {
 		}
 	}
 
+	@Override
 	public int insertStudentAutoInc(Student student) {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
 			int res = sqlSession.insert(namespace + ".insertStudentAutoInc", student);
@@ -50,6 +50,7 @@ public class StudentMapperImpl implements StudentMapper {
 		}
 	}
 
+	@Override
 	public int updateStudent(Student student) {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
 			int res = sqlSession.insert(namespace + ".updateStudent", student);
@@ -58,6 +59,7 @@ public class StudentMapperImpl implements StudentMapper {
 		}
 	}
 
+	@Override
 	public int deleteStudent(int id) {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
 			int res = sqlSession.insert(namespace + ".deleteStudent", id);
@@ -66,22 +68,18 @@ public class StudentMapperImpl implements StudentMapper {
 		}
 	}
 
+	@Override
 	public List<Map<String, Object>> selectStudentMapByAll() {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
 			return sqlSession.selectList(namespace + ".selectStudentMapByAll");
 		}
 	}
 
+	@Override
 	public Student selectStudentByNoResultMapExtends(Student student) {
 		try(SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()){
 			return sqlSession.selectOne(namespace + ".selectStudentByNoResultMapExtends", student);
 		}
-	}
-
-	@Override
-	public List<Map<String, Object>> selectStudentMapByall() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
