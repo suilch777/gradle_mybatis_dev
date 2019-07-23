@@ -9,7 +9,7 @@ import kr.or.yi.gradle_mybatis_dev.dto.Student;
 import kr.or.yi.gradle_mybatis_dev.jdbc.MyBatisSqlSessionFactory;
 
 public class StudentMapperImpl implements StudentMapper {
-	private String namespace = "kr.or.yi.gradle_mybatis_dev_teacher.dao.StudentMapper";
+	private String namespace = "kr.or.yi.gradle_mybatis_dev.dao.StudentMapper";
 
 	@Override
 	public Student selectStudentByNo(Student student) {
