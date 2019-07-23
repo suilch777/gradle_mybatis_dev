@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.yi.gradle_mybatis_dev.dao.TitleDao">
+
+	<insert id="insertTitile" parameterType="Title">
+		INSERT INTO title (code,name) 
+		VALUES(#{code},#{name})
+	</insert>
+	
+	<select id="selectTitleByAll" resultType="Title">
+		SELECT code, name FROM title
+	</select>
+	
+	<select id="selectTitleByCode" resultType="Title" parameterType="Title">
+		SELECT code, name FROM title WHERE code = #{code}
+	</select>
+	
+</mapper>
