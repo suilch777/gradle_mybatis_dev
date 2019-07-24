@@ -15,4 +15,12 @@
 		SELECT code, name FROM title WHERE code = #{code}
 	</select>
 	
+	<delete id="deleteTitle" parameterType="Title">
+		DELETE FROM title WHERE code=#{code}
+	</delete>
+	
+	<update id="updateTitle" parameterType="Title">
+	UPDATE title SET name=#{name} WHERE code=#{code}
+	</update>
+	
 </mapper>

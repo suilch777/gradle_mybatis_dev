@@ -36,14 +36,22 @@ public class TitleDaoImpl implements TitleDao {
 
 	@Override
 	public int deleteTitle(int code) {
-		// TODO Auto-generated method stub
-		return 0;
+		try(SqlSession sqlsession = MyBatisSqlSessionFactory.openSession()){
+			int res =sqlsession.delete(namespace + ".deleteTitle", code);
+			sqlsession.commit();
+			return res;
+		}
+		
 	}
 
 	@Override
 	public int updateTitle(Title title) {
-		// TODO Auto-generated method stub
-		return 0;
+		try(SqlSession sqlsession = MyBatisSqlSessionFactory.openSession()){
+			int res =sqlsession.update(namespace + ".updateTitle", title);
+			sqlsession.commit();
+			return res;
+		}
+		
 	}
 
 }

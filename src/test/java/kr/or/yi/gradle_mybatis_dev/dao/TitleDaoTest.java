@@ -5,11 +5,14 @@ import java.util.List;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import kr.or.yi.gradle_mybatis_dev.AbstractTest;
 import kr.or.yi.gradle_mybatis_dev.dto.Title;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TitleDaoTest extends AbstractTest {
 	private static TitleDao titleDao;
 
@@ -27,8 +30,8 @@ public class TitleDaoTest extends AbstractTest {
 	public void test01insertTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Title title = new Title();
-		title.setCode(3);
-		title.setName("과장");
+		title.setCode(5);
+		title.setName("사원");
 		int res = titleDao.insertTitile(title);
 		Assert.assertEquals(1, res);
 
@@ -53,4 +56,22 @@ public class TitleDaoTest extends AbstractTest {
 
 	}
 
+	@Test
+	public void test04updateTitle() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		Title title = new Title();
+		title.setCode(2);
+		title.setName("부장");
+		int res = titleDao.updateTitle(title);
+		Assert.assertEquals(1, res);
+
+	}
+	
+	@Test
+	public void test05deleteTitle() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		int res = titleDao.deleteTitle(5);
+		Assert.assertEquals(1, res);
+
+	}
 }
