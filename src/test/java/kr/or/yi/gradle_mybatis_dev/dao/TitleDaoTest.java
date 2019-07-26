@@ -32,7 +32,7 @@ public class TitleDaoTest extends AbstractTest {
 		Title title = new Title();
 		title.setCode(5);
 		title.setName("사원");
-		int res = titleDao.insertTitile(title);
+		int res = titleDao.insertTitle(title);
 		Assert.assertEquals(1, res);
 
 	}

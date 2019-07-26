@@ -21,7 +21,7 @@ public class TitleService {
 	
 	}
 	public int insertTitile(Title title) {
-		return dao.insertTitile(title);
+		return dao.insertTitle(title);
 	}
 	public int deleteTitle(int code) {
 		return dao.deleteTitle(code);

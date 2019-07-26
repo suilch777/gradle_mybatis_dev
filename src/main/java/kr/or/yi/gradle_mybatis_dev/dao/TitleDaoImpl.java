@@ -26,9 +26,9 @@ public class TitleDaoImpl implements TitleDao {
 	}
 
 	@Override
-	public int insertTitile(Title title) {
+	public int insertTitle(Title title) {
 		try (SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()) {
-			int res = sqlSession.insert(namespace + ".insertTitile", title);
+			int res = sqlSession.insert(namespace + ".insertTitle", title);
 			sqlSession.commit();
 			return res;
 		}

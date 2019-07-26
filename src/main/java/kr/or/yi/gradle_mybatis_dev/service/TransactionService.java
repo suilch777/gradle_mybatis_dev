@@ -9,10 +9,10 @@ import kr.or.yi.gradle_mybatis_dev.jdbc.MyBatisSqlSessionFactory;
 
 public class TransactionService {
 	
-	private String deptNamespace="kr.or.yi.gradle_mybatis_dev.dao.DepartmentDao";
+	private String deptNamespace ="kr.or.yi.gradle_mybatis_dev.dao.DepartmentDao";
 	private String titleNamespace="kr.or.yi.gradle_mybatis_dev.dao.TitleDao";
 	
-	public void addTitleDepartment(Title title, Department department) {
+	public int addTitleDepartment(Title title, Department department) {
 		int res=0;
 		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
 		try {
@@ -22,15 +22,13 @@ public class TransactionService {
 				sqlSession.commit();
 			else
 				throw new Exception();
-			
 		} catch (Exception e) {
-			e.printStackTrace();
 			sqlSession.rollback();
 			throw new RuntimeException(e.getCause());
-			// TODO: handle exception
 		}finally {
 			sqlSession.close();
 		}
+		return res;
 	}
 	public void removeTitleDepartment(int code, int deptNo) {
 		int res=0;
