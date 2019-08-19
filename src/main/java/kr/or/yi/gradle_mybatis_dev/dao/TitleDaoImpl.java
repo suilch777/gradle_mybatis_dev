@@ -35,9 +35,9 @@ public class TitleDaoImpl implements TitleDao {
 	}
 
 	@Override
-	public int deleteTitle(int code) {
+	public int deleteTitle(Title title) {
 		try(SqlSession sqlsession = MyBatisSqlSessionFactory.openSession()){
-			int res =sqlsession.delete(namespace + ".deleteTitle", code);
+			int res =sqlsession.delete(namespace + ".deleteTitle", title);
 			sqlsession.commit();
 			return res;
 		}
@@ -52,6 +52,12 @@ public class TitleDaoImpl implements TitleDao {
 			return res;
 		}
 		
+	}
+
+	@Override
+	public int deleteTitle(int code) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

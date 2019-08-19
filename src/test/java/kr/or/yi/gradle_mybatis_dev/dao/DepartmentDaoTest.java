@@ -41,7 +41,7 @@ public class DepartmentDaoTest extends AbstractTest {
 	public void test04selectDepartmentByCode() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Department department = new Department();
-		department.setDept_code(2);
+		department.setDeptCode(2);
 		Department searchDepartment = deptDao.selectDepartmentByCode(department);
 		log.debug("searchDepartment:" + searchDepartment);
 		Assert.assertNotNull(searchDepartment);
@@ -52,9 +52,9 @@ public class DepartmentDaoTest extends AbstractTest {
 	public void test05updateDepartment() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Department department = new Department();
-		department.setDept_code(5);
-		department.setDept_name("개발");
-		department.setFloor(2);
+		department.setDeptCode(4);
+		department.setDeptName("개발");
+		department.setFloor(7);
 		int res = deptDao.updateDepartment(department);
 		Assert.assertEquals(1, res);
 

@@ -57,7 +57,7 @@ public class TransactionServiceTest extends AbstractTest {
 	  log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 	  Title title = new Title(); title.setCode(8); title.setName("사원"); Department
 	  department = new Department(6, "H/W개발",6);
-	  service.removeTitleDepartment(title.getCode(), department.getDept_code());
+	  service.removeTitleDepartment(title.getCode(), department.getDeptCode());
 	  
 	  }
 
@@ -68,7 +68,7 @@ public class TransactionServiceTest extends AbstractTest {
 		title.setCode(7);
 		title.setName("무기계약");
 		Department department = new Department(10, "H/W개발", 6);
-		service.removeTitleDepartment(title.getCode(), department.getDept_code());
+		service.removeTitleDepartment(title.getCode(), department.getDeptCode());
 
 	}
 	
@@ -79,7 +79,7 @@ public class TransactionServiceTest extends AbstractTest {
 		title.setCode(7);
 		title.setName("무기계약");
 		Department department = new Department(6, "H/W개발", 6);
-		service.removeTitleDepartment(title.getCode(), department.getDept_code());
+		service.removeTitleDepartment(title.getCode(), department.getDeptCode());
 
 	}
 

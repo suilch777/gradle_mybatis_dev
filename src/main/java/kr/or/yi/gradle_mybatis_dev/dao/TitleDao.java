@@ -1,5 +1,6 @@
 package kr.or.yi.gradle_mybatis_dev.dao;
 
+
 import java.util.List;
 
 import kr.or.yi.gradle_mybatis_dev.dto.Title;
@@ -11,4 +12,6 @@ public interface TitleDao {
 	int insertTitle(Title title);
 	int deleteTitle(int code);
 	int updateTitle(Title title);
+	int deleteTitle(Title title);
+	
 }

@@ -30,8 +30,8 @@ public class TitleDaoTest extends AbstractTest {
 	public void test01insertTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Title title = new Title();
-		title.setCode(5);
-		title.setName("사원");
+		title.setCode(6);
+		title.setName("임시직");
 		int res = titleDao.insertTitle(title);
 		Assert.assertEquals(1, res);
 
@@ -70,7 +70,7 @@ public class TitleDaoTest extends AbstractTest {
 	@Test
 	public void test05deleteTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		int res = titleDao.deleteTitle(5);
+		int res = titleDao.deleteTitle(6);
 		Assert.assertEquals(1, res);
 
 	}

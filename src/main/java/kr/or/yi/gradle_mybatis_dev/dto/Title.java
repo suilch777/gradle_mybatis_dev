@@ -6,6 +6,11 @@ public class Title {
 	
 	public Title() {
 	}
+	
+	public Title(int code) {
+		this.code = code;
+	}
+
 	public Title(int code, String name) {
 		this.code = code;
 		this.name = name;
@@ -25,6 +30,21 @@ public class Title {
 	@Override
 	public String toString() {
 		return String.format("Title [code=%s, name=%s]", code, name);
+	}
+
+	public String getTitleName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+
+	public Object getTitleCode() {
+		// TODO Auto-generated method stub
+		return code;
+	}
+
+	public Object[] toArray() {
+		
+		return new Object[] {String.format("T%03d", code),name};
 	}
 	
 	
