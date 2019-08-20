@@ -7,7 +7,7 @@ import kr.or.yi.gradle_mybatis_dev.dto.Department;
 
 
 @SuppressWarnings("serial")
-public class DepartmentList extends AbstractList<Department> {
+public class DepartmentList extends AbstractListold<Department> {
 
 	public DepartmentList(String title) {
 		super(title);

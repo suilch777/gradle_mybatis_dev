@@ -3,39 +3,39 @@ package kr.or.yi.gradle_mybatis_dev.dto;
 
 
 public class Department {
-	int deptCode;
-	String deptName;
+	int dept_code;
+	String dept_name;
 	int floor;
 
 	public Department() {
 	}
 	
 	public Department(int deptNo, String deptName, int floor) {
-		this.deptCode = deptNo;
-		this.deptName = deptName;
+		this.dept_code = deptNo;
+		this.dept_name = deptName;
 		this.floor = floor;
 	}
 
 	public Department(int deptNo) {
-		this.deptCode = deptNo;
+		this.dept_code = deptNo;
 	}
 
 	
 
 	public int getDeptCode() {
-		return deptCode;
+		return dept_code;
 	}
 
 	public void setDeptCode(int deptCode) {
-		this.deptCode = deptCode;
+		this.dept_code = deptCode;
 	}
 
 	public String getDeptName() {
-		return deptName;
+		return dept_name;
 	}
 
 	public void setDeptName(String deptName) {
-		this.deptName = deptName;
+		this.dept_name = deptName;
 	}
 
 	public int getFloor() {
@@ -48,14 +48,14 @@ public class Department {
 
 	@Override
 	public String toString() {
-		return String.format("%s(%s층)", deptName, floor);
+		return String.format("%s(%s층)", dept_name, floor);
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + deptCode;
+		result = prime * result + dept_code;
 		return result;
 	}
 
@@ -68,14 +68,14 @@ public class Department {
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		if (deptCode != other.deptCode)
+		if (dept_code != other.dept_code)
 			return false;
 		return true;
 	}
 
 	public Object[] toArray() {
 		// TODO Auto-generated method stub
-		return new Object[] { String.format("D%3d", deptCode), deptName, floor };
+		return new Object[] { String.format("D%3d", dept_code), dept_name, floor };
 	}
 
 	

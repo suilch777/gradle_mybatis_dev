@@ -15,7 +15,7 @@
 		SELECT code, name FROM title WHERE code = #{code}
 	</select>
 	
-	<delete id="deleteTitle" parameterType="Title">
+	<delete id="deleteTitle" parameterType="title">
 		DELETE FROM title WHERE code=#{code}
 	</delete>
 	

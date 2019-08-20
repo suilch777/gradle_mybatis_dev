@@ -7,7 +7,7 @@ import kr.or.yi.gradle_mybatis_dev.dao.TitleDaoImpl;
 import kr.or.yi.gradle_mybatis_dev.dto.Title;
 import kr.or.yi.gradle_mybatis_dev.ui.content.AbstractPanel;
 import kr.or.yi.gradle_mybatis_dev.ui.content.PanelTitle;
-import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractList;
+import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractListold;
 import kr.or.yi.gradle_mybatis_dev.ui.list.TitleList;
 
 
@@ -25,7 +25,7 @@ public class TitleFrameUI extends AbstractFrameUI<Title> {
 	}
 	
 	@Override
-	protected AbstractList<Title> createListPanel(){
+	protected AbstractListold<Title> createListPanel(){
 		return new TitleList();
 	}
 	
@@ -54,6 +54,7 @@ public class TitleFrameUI extends AbstractFrameUI<Title> {
 		return dao.insertTitle(item);
 	}
 	
+
 	@Override
 	protected int deleteItem(Title item) {
 		return dao.deleteTitle(item);

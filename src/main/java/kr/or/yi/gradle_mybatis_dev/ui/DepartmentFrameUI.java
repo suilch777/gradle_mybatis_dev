@@ -17,7 +17,7 @@ import kr.or.yi.gradle_mybatis_dev.dao.DepartmentDaoImpl;
 import kr.or.yi.gradle_mybatis_dev.dto.Department;
 import kr.or.yi.gradle_mybatis_dev.ui.content.AbstractPanel;
 import kr.or.yi.gradle_mybatis_dev.ui.content.PanelDepartment;
-import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractList;
+import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractListold;
 import kr.or.yi.gradle_mybatis_dev.ui.list.DepartmentList;
 
 @SuppressWarnings("serial")
@@ -25,7 +25,7 @@ public class DepartmentFrameUI extends JFrame implements ActionListener {
 	private JButton btnAdd;
 	private AbstractPanel<Department> pContent;
 	private List<Department> deptList;
-	private AbstractList<Department> pList;
+	private AbstractListold<Department> pList;
 	private JButton btnCancel;
 
 	private JPopupMenu popupMenu;

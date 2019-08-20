@@ -8,10 +8,11 @@ import kr.or.yi.gradle_mybatis_dev.dto.Title;
 public interface TitleDao {
 	List<Title> selectTitleByAll();
 	Title selectTitleByCode(Title title);
-	
 	int insertTitle(Title title);
-	int deleteTitle(int code);
 	int updateTitle(Title title);
-	int deleteTitle(Title title);
+	int deleteTitle(int code);
+	
+	
+	
 	
 }

@@ -95,7 +95,7 @@ public class Employee {
 				eNo, 
 				eName,
 				String.format("%,d", salary),
-				String.format("%s(%s층)", dno.deptName, dno.getFloor()), 
+				String.format("%s(%s층)", dno.getDeptName(), dno.getFloor()), 
 				gender ? "남자" : "여자",
 				String.format("%tF", joinDate),
 				String.format("%s(%d)", title.getName(),title.getCode()));

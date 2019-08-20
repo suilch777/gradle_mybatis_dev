@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 
 import kr.or.yi.gradle_mybatis_dev.ui.content.AbstractPanel;
-import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractList;
+import kr.or.yi.gradle_mybatis_dev.ui.list.AbstractListold;
 
 
 
@@ -22,7 +22,7 @@ public abstract class AbstractFrameUI<T> extends JFrame implements ActionListene
 	private JButton btnAdd;
 	protected AbstractPanel<T> pContent;
 	protected List<T> itemList;
-	protected AbstractList<T> pList;
+	protected AbstractListold<T> pList;
 	private JButton btnCancel;
 
 	private JPopupMenu popupMenu;
@@ -139,7 +139,7 @@ public abstract class AbstractFrameUI<T> extends JFrame implements ActionListene
 		clearContent();
 	}
 	
-	protected abstract AbstractList<T> createListPanel();
+	protected abstract AbstractListold<T> createListPanel();
 	protected abstract AbstractPanel<T> createContentPanel();
 	
 	protected abstract int updateItem(T item);

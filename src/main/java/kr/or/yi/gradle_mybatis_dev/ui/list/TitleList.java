@@ -7,7 +7,7 @@ import kr.or.yi.gradle_mybatis_dev.dto.Title;
 
 
 @SuppressWarnings("serial")
-public class TitleList extends AbstractList<Title> {
+public class TitleList extends AbstractListold<Title> {
 	
 	public TitleList() {
 		super("직책");
