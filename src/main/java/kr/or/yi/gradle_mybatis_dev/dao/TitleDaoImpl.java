@@ -26,18 +26,18 @@ public class TitleDaoImpl implements TitleDao {
 	}
 
 	@Override
-	public int insertTitile(Title title) {
+	public int insertTitle(Title title) {
 		try (SqlSession sqlSession = MyBatisSqlSessionFactory.openSession()) {
-			int res = sqlSession.insert(namespace + ".insertTitile", title);
+			int res = sqlSession.insert(namespace + ".insertTitle", title);
 			sqlSession.commit();
 			return res;
 		}
 	}
 
 	@Override
-	public int deleteTitle(int code) {
+	public int deleteTitle(Title title) {
 		try(SqlSession sqlsession = MyBatisSqlSessionFactory.openSession()){
-			int res =sqlsession.delete(namespace + ".deleteTitle", code);
+			int res =sqlsession.delete(namespace + ".deleteTitle", title);
 			sqlsession.commit();
 			return res;
 		}
@@ -53,5 +53,10 @@ public class TitleDaoImpl implements TitleDao {
 		}
 		
 	}
+
+	
+
+	
+	
 
 }

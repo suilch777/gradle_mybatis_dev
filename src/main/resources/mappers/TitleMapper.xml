@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.or.yi.gradle_mybatis_dev.dao.TitleDao">
 
-	<insert id="insertTitile" parameterType="Title">
+	<insert id="insertTitle" parameterType="Title">
 		INSERT INTO title (code,name) 
 		VALUES(#{code},#{name})
 	</insert>
@@ -15,7 +15,7 @@
 		SELECT code, name FROM title WHERE code = #{code}
 	</select>
 	
-	<delete id="deleteTitle" parameterType="Title">
+	<delete id="deleteTitle" parameterType="title">
 		DELETE FROM title WHERE code=#{code}
 	</delete>
 	
