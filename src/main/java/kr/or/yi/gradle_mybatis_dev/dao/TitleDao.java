@@ -10,7 +10,7 @@ public interface TitleDao {
 	Title selectTitleByCode(Title title);
 	int insertTitle(Title title);
 	int updateTitle(Title title);
-	int deleteTitle(int code);
+	int deleteTitle(Title title);
 	
 	
 	

@@ -15,6 +15,8 @@ import kr.or.yi.gradle_mybatis_dev.dto.Title;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TitleDaoTest extends AbstractTest {
 	private static TitleDao titleDao;
+	Title title = new Title();
+	
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -26,10 +28,10 @@ public class TitleDaoTest extends AbstractTest {
 		titleDao = null;
 	}
 
+	
 	@Test
 	public void test01insertTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Title title = new Title();
 		title.setCode(6);
 		title.setName("임시직");
 		int res = titleDao.insertTitle(title);
@@ -70,7 +72,8 @@ public class TitleDaoTest extends AbstractTest {
 	@Test
 	public void test05deleteTitle() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		int res = titleDao.deleteTitle(6);
+		title.setCode(6);
+		int res = titleDao.deleteTitle(title);
 		Assert.assertEquals(1, res);
 
 	}
